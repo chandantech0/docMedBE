@@ -16,11 +16,13 @@
     "nodemailer": "^6.9.7",
     "socket.io": "^4.7.4",
     "socket.io-client": "^4.7.4",
-    "@vercel/postgres": "^0.7.2"
+    "@vercel/postgres": "^0.7.2",
+    "razorpay": "^2.9.2"
   },
   "scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node api/index.ts"
-	}
-  
+    "start:server": "nodemon server.js"
+	},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
