@@ -11,40 +11,6 @@ const MedicinesList = require('../models/medicinesList');
 const { generateRandomSecret } = require('../util/secure-secret-generator');
 const { setSecureKey, GetSecureKey } = require('../util/config');
 
-// for SMS Uninstall cmd - npm uninstall twilio dotenv
-// const twilio = require('twilio');
-// const dotenv = require('dotenv');
-
-// OTP verified
-// route.post('/api/user/signup-otp', async (req, res, next) => {
-//     // Twilio configuration
-//     const TWILIO_ACCOUNT_SID = 'AC30450ef5e945ddb58d86aabe39169d3f';
-//     const TWILIO_AUTH_TOKEN = 'c5022bb7b4b44c34d78f17f3e945d127';
-//     const TWILIO_PHONE_NUMBER = '7238818693';
-//     const twilioClient = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
-
-//     console.log(req.body)
-//     const { phone } = req.body;
-//     // Generate a random 6-digit OTP
-//     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-
-//     try {
-//       // Save the OTP to the user in the database
-//       const user = await User.findOneAndUpdate({ phone }, { otp }, { new: true, upsert: true });
-
-//       // Send the OTP via SMS using Twilio
-//       await twilioClient.messages.create({
-//         to: `+91${phone}`,
-//         from: `+91${TWILIO_PHONE_NUMBER}`,
-//         body: `Your OTP is: ${otp}`,
-//       });
-
-//       res.status(200).json({ message: 'OTP sent successfully' });
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ message: 'Error sending OTP' });
-//     }
-// });
 
 // OTP verified Via Email
 route.post('/api/user/signup-otp-email', async (req, res, next) => {
