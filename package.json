@@ -2,6 +2,7 @@
   "name": "doc-med",
   "version": "0.0.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "crypto-js": "^4.2.0",
@@ -20,7 +21,8 @@
     "razorpay": "^2.9.2"
   },
   "scripts": {
-    "start:server": "nodemon server.js"
+    "start:server": "nodemon server.js",
+    "start": "node server.js"
 	},
   "keywords": [],
   "author": "",
